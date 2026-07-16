@@ -1,0 +1,108 @@
+{
+  "name": "vyron-ide-eklenti",
+  "displayName": "VYRON AgentOS",
+  "description": "code-server icin AgentOS sohbeti, secili kodu sorma ve notlarda arama.",
+  "version": "0.1.0",
+  "publisher": "vyron",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://example.invalid/vyron/vyron-ide-eklenti.git"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "vyronSidebar",
+          "title": "VYRON AgentOS",
+          "icon": "media/vyron.svg"
+        }
+      ]
+    },
+    "views": {
+      "vyronSidebar": [
+        {
+          "id": "vyron.chatView",
+          "name": "AgentOS Sohbet",
+          "type": "webview"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "vyron.sorSecili",
+        "title": "AgentOS: Secili kodu AgentOS'a sor"
+      },
+      {
+        "command": "vyron.ara",
+        "title": "AgentOS: AgentOS'ta ara"
+      },
+      {
+        "command": "vyron.paneliAc",
+        "title": "AgentOS: Sohbet panelini ac"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "vyron.sorSecili",
+          "when": "editorHasSelection",
+          "group": "vyron@1"
+        },
+        {
+          "command": "vyron.ara",
+          "when": "editorHasSelection",
+          "group": "vyron@2"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "VYRON AgentOS",
+      "properties": {
+        "vyron.agentos.url": {
+          "type": "string",
+          "default": "http://127.0.0.1:8100",
+          "description": "AgentOS sunucu adresi (varsayilan yerel: http://127.0.0.1:8100)."
+        },
+        "vyron.agentos.user": {
+          "type": "string",
+          "default": "",
+          "description": "Basic-auth kullanici adi (yalniz uzaktan/Tailscale erisiminde gerekir; yerelde bos birakin)."
+        },
+        "vyron.agentos.password": {
+          "type": "string",
+          "default": "",
+          "description": "Basic-auth sifresi (yalniz uzaktan erisimde). Sifreyi koda gommeyin; buraya girin."
+        },
+        "vyron.agentos.token": {
+          "type": "string",
+          "default": "",
+          "description": "X-Agentos-Token basligi (basic-auth yerine kullanilabilir; kullanici/sifre girildiyse o oncelikli)."
+        },
+        "vyron.agentos.defaultProvider": {
+          "type": "string",
+          "default": "cerebras",
+          "description": "Varsayilan saglayici id (ornek: cerebras, gemini, mistral)."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.75.0",
+    "typescript": "^5.4.0"
+  }
+}

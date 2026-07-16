@@ -1,0 +1,30 @@
+VYRON AgentOS - code-server eklentisi (BENIOKU)
+
+NE YAPAR
+1. Yan panelde AgentOS ile sohbet acar; ustteki listeden saglayici secilir (cerebras, gemini, mistral, konsey vb).
+2. Editorde secili kodu AgentOS'a sorar (kod + sorun sohbete gider).
+3. AgentOS notlarinda arama yapar; sonuclar sohbet panelinde listelenir.
+Butun arayuz Turkce. Sohbet, secili kod ve arama; hepsi ayni yan panelde toplanir.
+
+NASIL ACILIR
+1. Sol kenar cubugundaki (Activity Bar) VYRON AgentOS simgesine tikla; yan panel acilir.
+2. Alttaki kutuya yaz, Gonder de (veya Ctrl+Enter). Ara butonu ayni kutudaki metni notlarda aratir. Temizle sohbeti sifirlar.
+3. Editorde bir kod sec, sag tik menusunden "AgentOS: Secili kodu AgentOS'a sor" de; acilan kutuya sorunu yaz. Kod ve sorun panele dusup yanit gelir.
+4. Sag tik menusunde "AgentOS: AgentOS'ta ara" da vardir; secili metni notlarda aratir.
+5. Komut paletinden (F1) "AgentOS:" yazarak ayni komutlara ulasabilirsin.
+
+AYARLAR (Dosya - Tercihler - Ayarlar icinde "vyron" ara)
+1. vyron.agentos.url : AgentOS adresi. Varsayilan http://127.0.0.1:8100 (yerel, sifresiz).
+2. vyron.agentos.user ve vyron.agentos.password : Sadece uzaktan / Tailscale erisiminde gereken basic-auth bilgisi. Yerelde bos birak.
+3. vyron.agentos.token : Basic-auth yerine X-Agentos-Token ile baglanmak istersen. Kullanici/sifre girildiyse o oncelikli olur.
+4. vyron.agentos.defaultProvider : Varsayilan saglayici id. Varsayilan cerebras.
+Not: Sifre ve token yalniz bu ayarlardan okunur, eklenti koduna gomulu degildir.
+
+PENCERE YENILEME (Demir yapacak)
+1. Eklenti kuruldu ama code-server servisi bilerek yeniden baslatilmadi (telefondan bagliyken oturum dusmesin diye).
+2. Eklentiyi gormek icin code-server penceresini bir kez yenile: Komut paleti (F1) - "Developer: Reload Window" (Gelistirici: Pencereyi Yeniden Yukle).
+3. Yenileme sonrasi sol kenarda VYRON AgentOS simgesi cikar.
+
+SORUN GIDERME
+1. "AgentOS'a baglanilamadi" : url ayarini ve 8100 servisinin acik oldugunu kontrol et.
+2. "Kimlik dogrulama gerekli" : uzaktan adres kullaniyorsan user/password ya da token ayarini gir.
