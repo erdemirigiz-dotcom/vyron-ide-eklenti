@@ -75,16 +75,19 @@
         "vyron.agentos.user": {
           "type": "string",
           "default": "",
+          "scope": "machine",
           "description": "Basic-auth kullanici adi (yalniz uzaktan/Tailscale erisiminde gerekir; yerelde bos birakin)."
         },
         "vyron.agentos.password": {
           "type": "string",
           "default": "",
+          "scope": "machine",
           "description": "Basic-auth sifresi (yalniz uzaktan erisimde). Sifreyi koda gommeyin; buraya girin."
         },
         "vyron.agentos.token": {
           "type": "string",
           "default": "",
+          "scope": "machine",
           "description": "X-Agentos-Token basligi (basic-auth yerine kullanilabilir; kullanici/sifre girildiyse o oncelikli)."
         },
         "vyron.agentos.defaultProvider": {
