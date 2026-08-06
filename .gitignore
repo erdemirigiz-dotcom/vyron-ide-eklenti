@@ -2,3 +2,12 @@ node_modules/
 out/
 *.vsix
 .vscode-test/
+
+# sirlar - asla depoya girmez
+.env
+.env.*
+!.env.example
+!.env.ornek
+*.key
+*.pem
+*.jks
