@@ -1,18 +1,39 @@
 {
   "name": "vyron-ide-eklenti",
   "displayName": "VYRON AgentOS",
-  "description": "code-server icin AgentOS sohbeti, secili kodu sorma ve notlarda arama.",
+  "description": "AgentOS chat, ask-about-selection and notes search in one code-server side panel.",
   "version": "0.1.0",
   "publisher": "vyron",
   "license": "SEE LICENSE IN LICENSE",
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#0F1520",
+    "theme": "dark"
+  },
   "repository": {
     "type": "git",
-    "url": "https://example.invalid/vyron/vyron-ide-eklenti.git"
+    "url": "https://github.com/erdemirigiz-dotcom/vyron-ide-eklenti.git"
   },
+  "homepage": "https://github.com/erdemirigiz-dotcom/vyron-ide-eklenti#readme",
+  "bugs": {
+    "url": "https://github.com/erdemirigiz-dotcom/vyron-ide-eklenti/issues"
+  },
+  "keywords": [
+    "agentos",
+    "code-server",
+    "ai-assistant",
+    "chat",
+    "llm",
+    "sidebar",
+    "webview",
+    "vyron",
+    "self-hosted"
+  ],
   "engines": {
     "vscode": "^1.75.0"
   },
   "categories": [
+    "Machine Learning",
     "Other"
   ],
   "activationEvents": [],
